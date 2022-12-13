@@ -23,7 +23,7 @@ function carValue(
 
 server.post("/car-value", carValue);
 
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 8083;
 
 server.listen(PORT, () => {
   console.log("listening to port", PORT);
