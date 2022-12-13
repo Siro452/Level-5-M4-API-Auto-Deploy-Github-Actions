@@ -2,10 +2,10 @@
 import sumChars from "./sumChars"; // import car value function
 const express = require("express"); // importing express
 const server = express(); // assigning express to a variable
-const env = require("dotenv");
+import dotenv from "dotenv";
 const request = require("supertest");
 server.use(express.json());
-env.config();
+dotenv.config();
 
 function carValue(
   req: { body: { carModel: string; year: number } },

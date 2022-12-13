@@ -5,7 +5,8 @@
   "main": "carvalue.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/index.js"
+    "build": "tsc",
+    "start": "npm install && npm run build && node build/app.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "vitest": "^0.25.5"
   },
   "dependencies": {
+    "aws-sdk": "^2.1273.0",
     "axios": "^1.2.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
