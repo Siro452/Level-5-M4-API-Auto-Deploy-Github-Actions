@@ -17,11 +17,11 @@ function carValue(req, res) {
     let carValue;
     ({ carModel, year } = req.body);
     carValue = (0, sumChars_1.default)(carModel, year);
-    res.JSON(carValue);
-    console.log(res.JSON(carValue));
+    res.json(carValue);
+    console.log(res.json(carValue));
 }
 server.post("/car-value", carValue);
-const PORT = process.env.PORT || 8083;
+const PORT = process.env.PORT || 4001;
 server.listen(PORT, () => {
     console.log("listening to port", PORT);
 });

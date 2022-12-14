@@ -1,6 +1,7 @@
 import sumChars from "./sumChars"; // import car value function
 import { describe, expect, it } from "@jest/globals";
-const error: string = "there is an error";
+const errorNegative: string = "number cannot be a negative";
+const errorWrongChar: string = "invalid character";
 
 describe("sum normal", () => {
   it("normal conditions and input", () => {
@@ -16,24 +17,24 @@ describe(" only numbers ", () => {
 
 describe("negative values", () => {
   it("Negative year gives wrong error", () => {
-    expect(sumChars("Task-Force", -987)).toBe(error);
+    expect(sumChars("Task-Force", -987)).toBe(errorNegative);
   });
 });
 
 describe("values are wrong types", () => {
   it("Wrong data type gives wrong error", () => {
-    expect(sumChars("C200", "twenty twenty")).toBe(error);
+    expect(sumChars("C200", "twenty twenty")).toBe(errorWrongChar);
   });
 });
 
 describe("inverse value types in wrong positions", () => {
   it("if string and number were inverse values gives error", () => {
-    expect(sumChars("213123", "fatcar")).toBe(error);
+    expect(sumChars("213123", "fatcar")).toBe(errorWrongChar);
   });
 });
 
 describe("special cahracters or spaces", () => {
   it("special character or string in wrong position will give error, spaces are ignored", () => {
-    expect(sumChars("ci vic^", "2014$%")).toBe(error);
+    expect(sumChars("ci vic^", "2014$%")).toBe(errorWrongChar);
   });
 });

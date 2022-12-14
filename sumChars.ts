@@ -12,10 +12,12 @@ export default function sumChars(carModel: string, carYear: number) {
   }
   //add total of the loop with the second param of year
   let totalSum = acc * 100 + Number(carYear);
-  //check if total is not a negative string has special characters or Year is a NaN
-  if (totalSum < 0 || isNaN(totalSum)) {
-    return "there is an error"; //  can JSON.stringify?
-  } else return "$" + totalSum; // can JSON.stringify?
+
+  if (totalSum < 0) {
+    return "number cannot be a negative";
+  } else if (isNaN(totalSum)) {
+    return "invalid character";
+  } else return "$" + totalSum;
 }
 
-console.log(sumChars("civic", 2014));
+console.log(sumChars("civic", 3014));
