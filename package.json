@@ -2,7 +2,7 @@
   "name": "m3v2",
   "version": "1.0.0",
   "description": "",
-  "main": "carvalue.js",
+  "main": "sumChars.js",
   "scripts": {
     "test": "jest",
     "build": "tsc",
