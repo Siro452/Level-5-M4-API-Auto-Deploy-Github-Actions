@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start": "npm install && npm run build && node build/app.js"
+    "start": "npm install && npm run build && node build/index.js"
   },
   "repository": {
     "type": "git",
