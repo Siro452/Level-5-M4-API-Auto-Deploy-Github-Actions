@@ -21,3 +21,4 @@ export default function sumChars(carModel: string, carYear: number) {
 }
 
 console.log(sumChars("civic", 3014));
+console.log(sumChars("911", 2932));
